@@ -14,6 +14,7 @@ docker compose up -d
  docker compose run web rails s
  docker compose run web rails server
 ```
+http://127.0.0.1:3000/
 
 ### サーバー停止
 ```
