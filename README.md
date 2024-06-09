@@ -23,10 +23,10 @@ docker compose down
 
 ### DB作成とマイグレーション実行
 ```
- docker compose run web rails db:create
+docker compose run web bundle exec rails db:create
 ```
 
 ### Rubocop
 ```
-docker compose run web rubocop
+bundle exec rubocop
 ```
