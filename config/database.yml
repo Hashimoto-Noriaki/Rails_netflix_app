@@ -1,22 +1,21 @@
-  default: &default
-    adapter: postgresql
-    encoding: unicode
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-    username: root
-    password: root
-    host: database
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: 5
 
-  development:
-    <<: *default
-    database: rails_netflix_app_development
+development:
+  <<: *default
+  database: rails_netflix_app_development
 
-  test:
-    <<: *default
-    database: rails_netflix_app_test
+test:
+  <<: *default
+  database: rails_netflix_app_test
 
-  production:
-    <<: *default
-    database: rails_netflix_app_production
-    username: root
-    password: <%= ENV['RAILS_NETFLIX_APP_DATABASE_PASSWORD'] %>
-    host: database
+production:
+  <<: *default
+  database: rails_netflix_app_production
+  username: rails_netflix_app
+  password: <%= ENV['RAILS_NETFLIX_APP_DATABASE_PASSWORD'] %>
