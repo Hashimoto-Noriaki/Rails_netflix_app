@@ -26,6 +26,11 @@ docker compose down
 docker compose run web bundle exec rails db:create
 ```
 
+### bundle install
+```
+docker compose run web bundle install
+```
+
 ### Rubocop
 ```
 bundle exec rubocop
