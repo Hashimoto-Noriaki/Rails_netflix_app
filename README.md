@@ -25,3 +25,8 @@ docker compose down
 ```
  docker compose run web rails db:create
 ```
+
+### Rubocop
+```
+docker compose run web rubocop
+```
