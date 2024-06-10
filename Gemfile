@@ -55,6 +55,9 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'factory_bot', '~> 6.2.0'
 end
 
 group :development do
