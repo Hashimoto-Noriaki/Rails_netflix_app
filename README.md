@@ -31,7 +31,14 @@ docker compose run web bundle exec rails db:create
 docker compose run web bundle install
 ```
 
+### Rspec
+```
+bundle exec rspec
+```
+
 ### Rubocop
 ```
 bundle exec rubocop
 ```
+
+
