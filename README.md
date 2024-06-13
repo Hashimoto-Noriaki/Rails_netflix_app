@@ -1,6 +1,6 @@
 ### その他詳細はwikiに記載
 
-
+https://github.com/Hashimoto-Noriaki/rails_netflix_app/wiki
 
 ## 環境構築(docker)
 ### ビルド
