@@ -1,7 +1,3 @@
-# The main application class for RailsNetflixApp.
-#
-# This class is responsible for configuring the Rails application,
-# setting defaults, and managing application-wide settings.
 module RailsNetflixApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
