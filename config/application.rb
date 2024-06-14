@@ -1,3 +1,14 @@
+require_relative 'boot'
+require 'rails/all'
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+# The main application class for RailsNetflixApp.
+#
+# This class is responsible for configuring the Rails application,
+# setting defaults, and managing application-wide settings.
 module RailsNetflixApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
