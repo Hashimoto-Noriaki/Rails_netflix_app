@@ -46,6 +46,9 @@ docker compose run web bundle exec rspec
 docker compose run web bundle exec rubocop
 ```
 
+### GitHubActions
+develpmentからmasterへpushするタイミング
+
 ### インフラ環境、デプロイ環境GCP
 クラウド
 - CloudRun
