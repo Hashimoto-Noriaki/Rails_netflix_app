@@ -1,24 +1,73 @@
-# README
+### その他詳細はwikiに記載
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://github.com/Hashimoto-Noriaki/rails_netflix_app/wiki
 
-Things you may want to cover:
 
-* Ruby version
+## 環境構築(docker)
+### ビルド
+```
+docker compose build
+```
 
-* System dependencies
+### 起動
+```
+docker compose up -d
+```
 
-* Configuration
+### サーバー起動
+```
+ docker compose run web rails s
+ docker compose run web rails server
+```
+http://127.0.0.1:3000/
 
-* Database creation
+### サーバー停止
+```
+docker compose down
+```
 
-* Database initialization
+### DB作成とマイグレーション実行
+```
+docker compose run web bundle exec rails db:create
+```
 
-* How to run the test suite
+### bundle install
+```
+docker compose run web bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Rspec
+```
+docker compose run web bundle exec rspec
+```
 
-* Deployment instructions
+### Rubocop
+```
+docker compose run web bundle exec rubocop
+```
+#
+### インフラ環境、デプロイ環境GCP
+クラウド
+- CloudRun
+- CloudRunJobs
+- CloudBuild
+- ArtifactRegistry
 
-* ...
+### なぜこの構成か
+月10円とかで運用できて、経費削減できるため
+
+### Cloud Run
+アプリのデプロイ先 (Dockerイメージを元に実行)
+
+### CloudRunJobs
+バッチ処理用のアプリをデプロイして定期実行するもの(Dockerイメージを元に実行)
+
+### ArtifactRegistry
+Dockerのコンテナイメージの保管先 (このイメージを元にCloudRunやCloudRunJobsにデプロイする)
+
+### CloudBuild
+自動デプロイ (Githubのmainにマージしたら自動でイメージを作ってArtifactRegistryに保管してくれて、その後CloudRunやCloudRunJobsに自動でデプロイしてくれる)
+
+### DB
+supabase
+
