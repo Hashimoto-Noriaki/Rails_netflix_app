@@ -1,0 +1,46 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1
+
+  Exclude:
+    - 'init/**/*'
+    - 'bin/**/*'
+    - 'Rakefile'
+    - 'config.ru'
+    - 'config/boot.rb'
+    - 'config/puma.rb'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+  SuggestExtensions: false
+  NewCops: enable
+  DisplayCopNames: true
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Layout/ClassStructure:
+  Enabled: true
+
+Layout/CommentIndentation:
+  AutoCorrect: false
+
+Layout/MultilineArrayBraceLayout:
+  AutoCorrect: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/development.rb'
+    - 'config/environments/production.rb'
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GlobalStdStream:
+  Enabled: false
