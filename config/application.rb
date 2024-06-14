@@ -1,11 +1,14 @@
-require_relative "boot"
-
-require "rails/all"
+require_relative 'boot'
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# The main application class for RailsNetflixApp.
+#
+# This class is responsible for configuring the Rails application,
+# setting defaults, and managing application-wide settings.
 module RailsNetflixApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -18,5 +21,7 @@ module RailsNetflixApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Set the default time zone
+    config.time_zone = 'Tokyo'
   end
 end

@@ -2,6 +2,7 @@
 
 https://github.com/Hashimoto-Noriaki/rails_netflix_app/wiki
 
+
 ## 環境構築(docker)
 ### ビルド
 ```
@@ -37,12 +38,12 @@ docker compose run web bundle install
 
 ### Rspec
 ```
-bundle exec rspec
+docker compose run web bundle exec rspec
 ```
 
 ### Rubocop
 ```
-bundle exec rubocop
+docker compose run web bundle exec rubocop
 ```
 
 ### インフラ環境、デプロイ環境GCP
