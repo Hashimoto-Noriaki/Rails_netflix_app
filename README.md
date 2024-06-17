@@ -1,3 +1,5 @@
+### フロントをReactまたはNext.jsにリプレース予定
+
 ### その他詳細はwikiに記載
 
 https://github.com/Hashimoto-Noriaki/rails_netflix_app/wiki
